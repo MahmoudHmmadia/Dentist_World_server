@@ -18,10 +18,14 @@ import user from "./routes/user";
 import cookieParser from "cookie-parser";
 import { verifyToken } from "./middleware/auth/verifyToken";
 import patient from "./routes/patient";
+import { fileURLToPath } from "url";
+import { dirname } from "path";
 
 // ==> Main Configuration <== //
 
 config();
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 const app = express();
 const STORAGE = multer.diskStorage({
   destination(_req, _file, callback) {
