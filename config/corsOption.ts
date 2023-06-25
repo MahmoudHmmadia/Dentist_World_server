@@ -9,7 +9,7 @@ const allowedOrigins = [
 ];
 export const corsOptions: CorsOptions = {
   origin(requestOrigin, callback) {
-    if (allowedOrigins.indexOf(requestOrigin!) !== -1 || !requestOrigin) {
+    if (allowedOrigins.includes(requestOrigin!) || !requestOrigin) {
       callback(null, true);
     } else {
       callback(new Error("NOT ALLOWED BY CORS"));
