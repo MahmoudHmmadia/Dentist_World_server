@@ -44,7 +44,7 @@ const accessLogStream = createStream("accessLog.log", {
 app.use(logger("combined", { stream: accessLogStream }));
 app.use(helmet());
 app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(
   "/assets",
   express.static(path.join(__dirname, "public/assets/images"))
