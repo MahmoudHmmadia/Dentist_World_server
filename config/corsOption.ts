@@ -9,11 +9,12 @@ const allowedOrigins = [
 ];
 export const corsOptions: CorsOptions = {
   origin(requestOrigin, callback) {
-    if (allowedOrigins.includes(requestOrigin!) || !requestOrigin) {
-      callback(null, true);
-    } else {
-      callback(new Error("NOT ALLOWED BY CORS"));
-    }
+    if (requestOrigin)
+      if (allowedOrigins.includes(requestOrigin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("NOT ALLOWED BY CORS"));
+      }
   },
   optionsSuccessStatus: 200,
   credentials: true,
