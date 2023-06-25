@@ -1,9 +1,9 @@
 import { CorsOptions } from "cors";
 const allowedOrigins = [
-  "https://www.mySite.com",
-  "http://localhost:3003",
-  "http://localhost:3001",
-  "http://localhost:3000",
+  "https://www.Dentist_World.onrender.com",
+  // "http://localhost:3003",
+  // "http://localhost:3001",
+  // "http://localhost:3000",
 ];
 export const corsOptions: CorsOptions = {
   origin(requestOrigin, callback) {
