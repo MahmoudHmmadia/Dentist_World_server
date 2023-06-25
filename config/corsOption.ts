@@ -1,6 +1,7 @@
 import { CorsOptions } from "cors";
 const allowedOrigins = [
-  "https://www.dentist_world.onrender.com",
+  "https://dentist-world.onrender.com/",
+  "https://www.dentist-world.onrender.com/",
   "https://www.dentists_students_world.onrender.com",
   // "http://localhost:3003",
   // "http://localhost:3001",
