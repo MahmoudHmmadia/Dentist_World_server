@@ -10,7 +10,7 @@ import { createStream } from "rotating-file-stream";
 import root from "./routes/server";
 import cors from "cors";
 import path from "path";
-import { corsOptions } from "./config/corsOption";
+// import { corsOptions } from "./config/corsOption";
 import register from "./routes/register";
 import auth from "./routes/auth";
 import refresh from "./routes/refresh";
