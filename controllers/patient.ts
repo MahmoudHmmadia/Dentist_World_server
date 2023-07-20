@@ -36,9 +36,10 @@ export async function updatePatientState(req: Request, res: Response) {
   try {
     const patient = await Patient.findById(req.params.patientId);
     patient!.state = {};
-    patient!.state = req.body.patientState;
+    patient!.state = JSON.parse(req.body.patientState);
     patient!.clinics = Object.keys(patient?.state);
     patient!.smoker = req.body.smook;
+    if (req.body.xRayName) patient!.xRay = req.body.xRayName;
     await patient?.save();
     const user = await User.findById(req.params.userId);
     for (let i = 0; i < user?.reservedCases.length!; i++) {

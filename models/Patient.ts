@@ -22,9 +22,9 @@ const patientSchema = new mongoose.Schema(
       type: Array,
       default: ["التشخيص"],
     },
-    xRays: {
-      type: Array,
-      default: ["التشخيص"],
+    xRay: {
+      type: String,
+      default: "",
     },
     occupation: String,
     smoker: {
