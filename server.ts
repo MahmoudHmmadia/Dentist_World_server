@@ -20,6 +20,8 @@ import { verifyToken } from "./middleware/auth/verifyToken";
 import patient from "./routes/patient";
 import { fileURLToPath } from "url";
 import { dirname } from "path";
+import { User } from "./models/User";
+import Patient from "./models/Patient";
 
 // ==> Main Configuration <== //
 
@@ -79,7 +81,7 @@ mongoose
     dbName: "last_project",
   })
   .then(() => {
-    app.listen(PORT, async () => {
+    app.listen(PORT, () => {
       console.log(`SERVER RUNNING ON PORT ${PORT}`);
     });
   })
